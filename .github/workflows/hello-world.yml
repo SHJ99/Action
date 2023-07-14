@@ -14,4 +14,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Hello World 출력
-        run: python hello.py
+        run: python hell.py
