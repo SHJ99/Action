@@ -22,10 +22,10 @@ jobs:
 
       - name: Run Python
         run: |
-          python -c "print('bob life with Python ' + '${{ matrix.python-version }}') > py_ver.txt"
+          python -c "print('bob life Python ' + '${{ matrix.python-version }}') > output.txt"
 
       - name: Upload artifact - Python ${{ matrix.python-version }}
         uses: actions/upload-artifact@v2
         with:
           name: output_${{ matrix.python-version }}
-          path: py_ver.txt
+          path: output.txt
