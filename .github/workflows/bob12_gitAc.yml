@@ -22,7 +22,7 @@ jobs:
 
       - name: Run Python
         run: |
-          python -c "print('bob life Python ' + '${{ matrix.python-version }}') > output.txt"
+          python -c "with open('output.txt', 'w') as file: file.write('bob life with Python ' + '${{ matrix.python-version }}')"
 
       - name: Upload artifact - Python ${{ matrix.python-version }}
         uses: actions/upload-artifact@v2
